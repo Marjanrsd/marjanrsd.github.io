@@ -6,7 +6,7 @@
   	<meta name="author" content="Robert Bain">
   	<link rel="stylesheet" href="./styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<script src="https://rkbain.com/infinite-scroll.pkgd.min.js"></script>
+	<!--<script src="https://rkbain.com/infinite-scroll.pkgd.min.js"></script>-->
 	<style>
         @media screen and (max-width: 1080px) and (min-width: 1px) {p {text-align: unset !important; } }
 	@media screen and (min-width: 1px) {#dynamic-neurons {display:none;}}
@@ -212,63 +212,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="underscore.js"></script>
 <script>
-elem = document.querySelector('.flex-projects');
-infScroll = new InfiniteScroll(elem, {
-    path: '.pagination__next',
-    append: '.flex-project-inf',
-    hideNav: '.pagination',
-    history: false,
-});
-
-$(document).ready(function() {
-
-	// start jezzball game after 8 seconds
-	setTimeout(()=>{
-		$("#iframe-jezzball").contents().find("#canvas_flex").click();		
-	}, 8000);
-
-	toggle_play_mtg = (function () {
-		var toggle = false;
-		var mtg = document.getElementById('mtg');
-		return function () {
-			toggle = !toggle;
-			if (toggle) {
-				mtg.play();
-			}
-			else {
-				mtg.pause();
-			}
-		}
-	})();
-
-	toggle_play_builder = (function () {
-		var toggle = false;
-		var builder = document.getElementById('builder');
-		return function () {
-			toggle = !toggle;
-			if (toggle) {
-				builder.play();
-			}
-			else {
-				builder.pause();
-			}
-		}
-	})();
-
-	toggle_play_jezz = (function () {
-		var toggle = false;
-		var jezz = document.getElementById('jezz');
-		return function () {
-			toggle = !toggle;
-			if (toggle) {
-				jezz.play();
-			}
-			else {
-				jezz.pause();
-			}
-		}
-	})();
-
 	$('.skills-list li').height($('.skills-list li').width());
 
 	//Throttled function that resizes the skills section's svg logo height to maintain a 1:1 aspect ratio
@@ -307,17 +250,6 @@ $(document).ready(function() {
 	});
 
 });
-
-//Menu Overlay Functions
-function openNav() {
-	document.getElementById("myNav").style.height = "100%";
-	document.getElementById("hamburger").style.opacity="0";
-}
-
-function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-    document.getElementById("hamburger").style.opacity="1";
-}
 
 $("#scar-boi").hover((_)=>{w=$(_.target).width();h=$(_.target).height(); _.target.src = "scar2.jpg"; $(_.target).height(h);$(_.target).width(w)}, (_)=>{_.target.src = "./images/selfie.jpg"});
 
