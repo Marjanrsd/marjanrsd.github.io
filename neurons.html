@@ -58,15 +58,15 @@ function Ball(src) {
   this.yVelocity = Math.random() / 8 //+ 1;
    	this.element = $("<img class='ball' src=" + src + " style='height:370px;'/>", {
   });
-  if (src == 'https://rkbain.com/neuron_1.svg'){
+  if (src == 'https://marjanrsd.github.io/neuron_1.svg'){
  	this.element = $("<img class='ball' src=" + src + " style='height:50px;'/>", {
   });  
   }
-  if (src == 'https://rkbain.com/neuron_15.svg'){
+  if (src == 'https://marjanrsd.github.io/neuron_15.svg'){
  	this.element = $("<img class='ball' src=" + src + " style='height:50px;'/>", {
   });  
   }
-  if (src == 'https://rkbain.com/neuron_14.svg'){
+  if (src == 'https://marjanrsd.github.io/neuron_14.svg'){
  	this.element = $("<img class='ball' src=" + src + " style='height:50px;'/>", {
   });  
   }
@@ -113,7 +113,7 @@ var ballArray = [];
 
 for (var i = 0; i < 80; i++) {
 	j = (i % 15) + 1;
-	ballArray.push(new Ball('https://rkbain.com/neuron_' + j + '.svg'));
+	ballArray.push(new Ball('https://marjanrsd.github.io/neuron_' + j + '.svg'));
 }
 
 function draw() {
